@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+		<link rel="stylesheet" type="text/css" href="CSS/style.css">
+	</head>
+	<body>
+		<div>
+			<ul>
+				<li style="float:left"><a class="active" href="index.html">Home</a></li>
+				<li><a href="html_templates/cinderella.html">Cinderella</a></li>
+				<li><a href="html_templates/little_mermaid.html">Little Mermaid</a></li>
+				<li><a href="html_templates/beauty_and_beast.html">Beauty and Beast</a></li>
+			</ul>
+		</div>
+		
+		<div class="imagecontainer" style="width:60%;margin-top:10%">
+
+		<a class="circle" onclick="plusDivs(-1)" style="float:left;">&#10094;</a>
+		<a class="circle" onclick="plusDivs(1)" style="float:right">&#10095;</a>
+
+		<div class="slidecontainer mySlides">
+			<div class="textcontainer" style="float:left;height:5%">
+				Cinderella
+			</div>
+			<a href="html_templates/cinderella.html"><img src="assets/cinderella.jpg" style="width:100%">
+		</div>
+
+		<div class="slidecontainer mySlides">
+			<a href="html_templates/little_mermaid.html"><img src="assets/little_mermaid.jpg" style="width:100%">
+			<div class="textcontainer" style="float:right;height:5%">
+				Little Mermaid
+			</div>
+		</div>
+
+		<div class="slidecontainer mySlides">
+			<a href="html_templates/beauty_and_beast.html"><img src="assets/beauty_and_beast.jpg" style="width:100%">
+			<div class="textcontainer" style="float:left;height:5%">
+				Beauty and Beast
+			</div>
+		</div>
+
+		</div>
+
+		<script>
+		var slideIndex = 1;
+		showDivs(slideIndex);
+		
+		setInterval(function(){ 
+			showDivs(slideIndex++); },
+			2000);
+		
+		function plusDivs(n) {
+		showDivs(slideIndex += n);
+		}
+
+		function showDivs(n) {
+		var i;
+		var x = document.getElementsByClassName("mySlides");
+		if (n > x.length-1) {
+			slideIndex = 1
+		}
+		if (n < 1) {
+			slideIndex = x.length-1
+		}
+		for (i = 0; i < x.length; i++) {
+		x[i].style.display = "none";
+		}
+		x[slideIndex-1].style.display = "block";
+		}
+		</script>
+
+	</body>
+</html>
+

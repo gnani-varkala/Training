@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Employee List</title>
+		<!-- angular min file -->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+		<!-- script file for employeeApp application -->
+		<script src="JS/employeeBackEnd.js"></script>
+		<!-- bootstrap min file -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	</head>
+	<!-- application is defined here -->
+	<body ng-app="employeeApp">
+	<div ng-controller = "headerCtrl">
+	<!-- header div starts here which contains input type file;import button;export button;addEmployee button -->
+	<div>
+		<!-- button to choose a file from the computer -->
+		<input type="file"  file-reader="fileContent" >
+		<!-- import button -->
+		<input type="button" ng-click = "import_Employee()" value= "import_File" ng-model="fileContent" >
+		<!-- add_Employee button -->
+		<input type="button" ng-click = "add_Employee()" value= "Add_Employee">
+		<!-- Export button -->
+		<input type="button" ng-click = "Export_To_File()" value = "Export_To_File">
+	</div></br>
+	<!-- addEmployeeDetails div starts here -->
+	<div ng-controller="addEmployeeCtrl" ng-show="addEmployeePage">
+		<!-- employee ID field -->
+		<input type = "text" Placeholder="employee_ID" ng-model="employee_ID" required><br>
+		<!-- employee Name field -->
+		<input type = "text" Placeholder="employee_Name" ng-model="employee_Name" required><br>
+		<!-- employee Designation field -->
+		<input type = "text" Placeholder="employee_Designation" ng-model="employee_Designation" required><br>
+		<!-- employee Joining Date field -->
+		<input type = "date" Placeholder="employee_Joining_Date" ng-model="employee_Joining_Date" required><br>
+		<!-- employee salary field -->
+		<input type = "number" Placeholder="employee_Salary" ng-model="employee_Salary" required><br>
+		<!-- save button -->
+		<input type="button" ng-click = "addEmployeeDetails()" value="save" required>
+		<!-- back button -->
+		<input type="button" ng-click = "backButton()" value="Back">
+	</div>
+	<!-- div to display employee details and also edit or delete corresponding employee -->
+	<div  ng-controller="employeeListCtrl" >
+	<!-- shows employee details in a table -->
+		<table ng-show="Display">
+			<tr>
+				<th>Employee_ID</th>
+				<th>Employee_Name</th>
+			</tr>
+			<tr ng-repeat= "employee in EEmployees" >
+				<td>{{employee.ID}}</td>
+				<td>{{employee.Name}}</td>
+				<!-- edit button -->
+				<td><button ng-click="editEmployeeDetails(employee)">edit</td>
+				<!-- delete button -->
+				<td><button ng-click="deleteEmployee(employee)">delete</td>
+			</tr>
+		</table>
+		<!-- div to edit employee details -->
+		<div ng-hide="Display">
+			<input type = "text" Placeholder="employee_ID" ng-model="employee_ID">
+			<input type = "text" Placeholder="employee_Name" ng-model="employee_Name">
+			<input type = "text" Placeholder="employee_Designation" ng-model="employee_Designation">
+			<input type = "date" Placeholder="employee_Joining_Date" ng-model="employee_Joining_Date">
+			<input type = "number" Placeholder="employee_Salary" ng-model="employee_Salary">
+			<input type="button" ng-click = "changeEmployeeDetails()" value="save">
+			<input type="button" ng-click="backButton()" value = "Back"> 
+		</div>
+	</div>
+	</div>
+	</body>
+</html>
