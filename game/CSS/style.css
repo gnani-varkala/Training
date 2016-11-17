@@ -1,0 +1,32 @@
+.row_span{
+	margin-top:15%;
+}
+
+.mainDiv_1{
+			background-color:lightblue!important;
+			text-align: center;
+		}
+.mainDiv_2{
+			background-color:aqua!important;
+			text-align: center;
+		}
+.heading1Div{
+	height:80px;
+	background-color:aqua
+}
+
+.heading2Div{
+	height:80px;
+	background-color:grey
+}
+
+.active{
+		background-color:red!important;
+}
+
+.buttonStyle{
+	margin-top: 15%;
+	width: 40%;
+	height:40%;
+	text-align: center;
+}
