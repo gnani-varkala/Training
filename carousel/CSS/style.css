@@ -85,7 +85,16 @@ li a:hover {
 	height:200px;
 }
 
-
-
-
-
+#container {
+  width: 200px;
+  height: 100px;
+  position: relative;
+}
+#navi,
+#infoi {
+  width: 200px;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
