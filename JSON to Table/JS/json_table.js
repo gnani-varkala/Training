@@ -1,6 +1,6 @@
 $(document).ready(function(){
-	/*	var Employees= [
-    {
+	 /*var Employees= [
+	{
       "ID": "30024",
       "Name": "NagaLatha",
       "Designation": "Trainee",
@@ -21,21 +21,21 @@ $(document).ready(function(){
 			console.log(result);
        
 		console.log(Employees);
-		$("#test").append('<table class="table">');
-		$("#test").append("<thead><tr>");
+		
+		$("#test").html($("<tbody></tbody>"))
+		var table = $("#test").children()[0];
+		$(table).append($("<tr></tr>"));
+		var header = $(table).children()[0];
 			for(var index in Employees[0]){
-				$("#test").append("<th>"+index+"</th>");
+				$(header).append("<th>"+index+"</th>");
 			}
-				$("#test").append("</tr></thead>");
 			//appending array elements to DOM
 			for(var i=0;i<Employees.length;i++){
-				$("#test").append("<tr>");
+				var tr = $("<tr></tr>")
 				for(var index in Employees[i]){
-					$("#test").append("<td>"+Employees[i][index]+"</td>");
+					$(tr).append("<td>"+Employees[i][index]+"</td>");
 				}
-					$("#test").append("</tr>");
+					$(table).append(tr);
 			}
-			//function to check for repetion
-			$("#test").append("</table>"); 
-		 }});
+		// }});
 });
