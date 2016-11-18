@@ -1,24 +1,16 @@
 $(document).ready(function(){
-	$("#buttonClass").click(function() {
-		editid = "\""+$(this).attr("data-target")+"\"";
-		console.log(this);
-		console.log(editid);
-		var url = $(".cartoonVideo").attr('src');
-
-		$(editid).on('hide.bs.modal', function(){
+	$(".container").click(function() {
+		var editid = $(this).find("iframe");
+		var url = $(editid).attr('src')+"?autoplay=1";
+		var myId = $($(this).find("button")).attr('data-target');
+		$(myId).on('hide.bs.modal', function(e){
 			$(".cartoonVideo").attr('src', '');
 		});
 
-		$(editid).on('show.bs.modal', function(){
+		$(myId).on('show.bs.modal', function(e){
 			$(".cartoonVideo").attr('src', url);
 		});
 	});
-	/*$("#myModal").on('hide.bs.modal', function(){
-        $(".cartoonVideo").attr('src', '');
-    });
 
-    $("#myModal").on('show.bs.modal', function(){
-        $(".cartoonVideo").attr('src', url);
-    });*/
-    
+
 });
