@@ -29,12 +29,10 @@ $(document).ready(function(){
 				$("#test").append("</tr></thead>");
 			//appending array elements to DOM
 			for(var i=0;i<Employees.length;i++){
-					$("#test").append("<tr>");
-	        $("#test").append("<td>"+Employees[i].ID+"</td>");
-					$("#test").append("<td>"+Employees[i].Name+"</td>");
-					$("#test").append("<td>"+Employees[i].Designation+"</td>");
-					$("#test").append("<td>"+Employees[i].Experience+"</td>");
-					$("#test").append("<td>"+Employees[i].Salary+"</td>");
+				$("#test").append("<tr>");
+				for(var index in Employees[i]){
+					$("#test").append("<td>"+Employees[i][index]+"</td>");
+				}
 					$("#test").append("</tr>");
 			}
 			//function to check for repetion
