@@ -18,9 +18,6 @@ $(document).ready(function(){
 		var Employees = [];
 		$.ajax({url: "JSON/details.json", success: function(result){
 			Employees = result;
-			console.log(result);
-       
-		console.log(Employees);
 		
 		$("#test").html($("<tbody></tbody>"))
 		var table = $("#test").children()[0];
@@ -37,5 +34,5 @@ $(document).ready(function(){
 				}
 					$(table).append(tr);
 			}
-		// }});
+		 }});
 });
