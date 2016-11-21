@@ -1,92 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>Bootstrap Case</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
-<body>
+	<head>
+		<title>Bootstrap Case</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	</head>
+	<body>
 
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand active" href="index.html">Home</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar"  >
-      <ul class="nav navbar-nav navbar-right">
-        <li>
-          <a href="html_templates/cinderella.html">Cinderella</a>
-        </li>
-        <li><a href="html_templates/little_mermaid.html">Little Mermaid</a></li>
-        <li><a href="html_templates/beauty_and_beast.html">Beauty and Beast</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+		<nav class="navbar navbar-inverse">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand active" href="index.html">Home</a>
+				</div>
+				<div class="collapse navbar-collapse" id="myNavbar"  >
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="html_templates/cinderella.html">Cinderella</a></li>
+						<li><a href="html_templates/little_mermaid.html">Little Mermaid</a></li>
+						<li><a href="html_templates/beauty_and_beast.html">Beauty and Beast</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
 
-<div class="w3-content w3-display-container" style="width:50%;margin-top:15%">
+		<div class="w3-content w3-display-container" style="width:50%;margin-top:15%">
 
-<a class="w3-btn-floating w3-hover-dark-grey w3-display-left" onclick="plusDivs(-1)">&#10094;</a>
-<a class="w3-btn-floating w3-hover-dark-grey w3-display-right" onclick="plusDivs(1)">&#10095;</a>
+			<a class="w3-btn-floating w3-hover-dark-grey w3-display-left" onclick="plusDivs(-1)">&#10094;</a>
+			<a class="w3-btn-floating w3-hover-dark-grey w3-display-right" onclick="plusDivs(1)">&#10095;</a>
 
-<div class="w3-display-container mySlides">
-  <a href="html_templates/cinderella.html"><img src="assets/cinderella.jpg" style="width:100%" >
-  <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
-    Cinderella
-  </div>
-</div>
+			<div class="w3-display-container mySlides">
+				<a href="html_templates/cinderella.html"><img src="assets/cinderella.jpg" style="width:100%" >
+				<div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
+					Cinderella
+				</div>
+			</div>
 
-<div class="w3-display-container mySlides" >
-  <a href="html_templates/little_mermaid.html"><img src="assets/little_mermaid.jpg"style="width:100%" >
-  <div class="w3-display-topleft w3-large w3-container w3-padding-16 w3-black">
-    Little_mermaid
-  </div>
-</div>
+			<div class="w3-display-container mySlides" >
+				<a href="html_templates/little_mermaid.html"><img src="assets/little_mermaid.jpg"style="width:100%" >
+				<div class="w3-display-topleft w3-large w3-container w3-padding-16 w3-black">
+					Little_mermaid
+				</div>
+			</div>
 
-<div class="w3-display-container mySlides">
-  <a href="html_templates/beauty_and_beast.html"><img src="assets/beauty_and_beast.jpg" style="width:100%">
-  <div class="w3-display-topright w3-large w3-container w3-padding-16 w3-black">
-    Beauty_and_Beast
-  </div>
-</div>
-</div>
-
-<script>
-var slideIndex = 1;
-showDivs(slideIndex);
-
-setInterval(function(){
-  showDivs(slideIndex++); },
-  2000);
-
-function plusDivs(n) {
-showDivs(slideIndex += n);
-}
-
-function showDivs(n) {
-var i;
-var x = document.getElementsByClassName("mySlides");
-if (n > x.length-1) {
-  slideIndex = 1
-}
-if (n < 1) {
-  slideIndex = x.length-1
-}
-for (i = 0; i < x.length; i++) {
-x[i].style.display = "none";
-}
-x[slideIndex-1].style.display = "block";
-}
-</script>
-
-</body>
+			<div class="w3-display-container mySlides">
+				<a href="html_templates/beauty_and_beast.html"><img src="assets/beauty_and_beast.jpg" style="width:100%">
+				<div class="w3-display-topright w3-large w3-container w3-padding-16 w3-black">
+				Beauty_and_Beast
+				</div>
+			</div>
+		</div>
+	</body>
+	<script>
+		var slideIndex = 1;
+		showDivs(slideIndex);
+		setInterval(function(){
+ 			 showDivs(slideIndex++); },
+ 		 2000);
+		function plusDivs(n) {
+			showDivs(slideIndex += n);
+		}
+		function showDivs(n) {
+		var i;
+		var x = document.getElementsByClassName("mySlides");
+		if (n > x.length-1) {
+ 			 slideIndex = 1
+		}
+		if (n < 1) {
+ 		 slideIndex = x.length-1
+		}
+		for (i = 0; i < x.length; i++) {
+			x[i].style.display = "none";
+		}
+		x[slideIndex-1].style.display = "block";
+		}
+	</script>
 </html>
